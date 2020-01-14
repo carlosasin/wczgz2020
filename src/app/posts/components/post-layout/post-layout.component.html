@@ -1,2 +1,5 @@
-post
- asa as
+<article [attr.id]="'post-' + post.id">
+  <app-post-header [post]="post"></app-post-header>
+  <app-post-body [post]="post"></app-post-body>
+  <app-post-navigation [post]="post"></app-post-navigation>
+</article>

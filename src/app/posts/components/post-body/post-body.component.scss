@@ -1,0 +1,71 @@
+@import "variables/index";
+
+.c-post-body {
+  padding-top: 5rem;
+  line-height: 1.5;
+  padding-bottom: 5rem;
+
+  ::ng-deep &__container {
+    p,
+    ol,
+    ul,
+    dl,
+    dt {
+      font-family: NonBreakingSpaceOverride, "Hoefler Text", Garamond,
+        "Times New Roman", serif;
+      letter-spacing: normal;
+    }
+
+    > * {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 1.25em;
+    }
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > *:last-child {
+      margin-bottom: 0;
+    }
+
+    > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+      max-width: 58rem;
+      width: calc(100%);
+    }
+
+    .has-text-align-center {
+      text-align: center;
+    }
+
+    blockquote {
+      border-color: $colorLinks;
+      border-style: solid;
+      border-width: 0 0 0 0.2rem;
+      color: inherit;
+      font-size: 1em;
+      margin: 4rem auto;
+      padding: 0.5rem 0 0.5rem 2rem;
+    }
+
+    cite {
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.25;
+      color: $colorTextSoft;
+    }
+  }
+}
+
+@media all and (min-width: $screen-sm-minus) {
+  .c-post-body {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    ::ng-deep &__container {
+      font-size: 2.1rem;
+    }
+  }
+}

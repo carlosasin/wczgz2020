@@ -1,4 +1,4 @@
-@import 'variables/index';
+@import "variables/index";
 
 .c-footer {
   &__content {
@@ -11,7 +11,6 @@
 
     a {
       text-decoration: none;
-      color: inherit;
 
       ::ng-deep .desktop & {
         &:hover {
@@ -24,6 +23,10 @@
       &__copyright {
         font-weight: 600;
         margin: 0;
+
+        > * {
+          color: $colorTextDefault;
+        }
       }
 
       &__wordpress {
@@ -39,7 +42,7 @@
         cursor: pointer;
 
         &::after {
-          content: ' ↑';
+          content: " ↑";
         }
       }
 
@@ -64,8 +67,11 @@
 
         &__wordpress {
           display: block;
-          color: $colorTextSoft;
           margin: 0 0 0 2.4rem;
+
+          > * {
+            color: $colorTextSoft;
+          }
         }
       }
 

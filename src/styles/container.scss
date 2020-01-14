@@ -7,7 +7,7 @@
   &::after {
     display: table;
     clear: both;
-    content: '';
+    content: "";
   }
 
   &-thin {
@@ -19,9 +19,9 @@
   }
 }
 
-@media only screen and (min-width: $screen-sm) {
+@media only screen and (min-width: $screen-sm-minus) {
   .u-container {
-    width: 730px;
+    width: 620px;
     margin-right: auto;
     margin-left: auto;
     padding-right: 0;

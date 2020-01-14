@@ -22,8 +22,8 @@ export function initPaths(appService: AppService) {
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes, {
-      // initialNavigation: 'disabled',
-      // scrollPositionRestoration: 'enabled'
+      initialNavigation: 'disabled',
+      scrollPositionRestoration: 'enabled'
     }),
 
     // App modules

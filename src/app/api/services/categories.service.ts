@@ -14,4 +14,10 @@ export class CategoriesService {
       .get<CategoryDto[]>(`${environment.apiUrl}wp/v2/categories`)
       .pipe(catchError(error => throwError(error)));
   }
+
+  getCategory(id: number): Observable<CategoryDto> {
+    return this.http
+      .get<CategoryDto>(`${environment.apiUrl}wp/v2/categories/${id}`)
+      .pipe(catchError(error => throwError(error)));
+  }
 }

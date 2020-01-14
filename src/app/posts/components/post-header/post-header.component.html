@@ -1,0 +1,41 @@
+<header class="c-post-header">
+  <div class="c-post-header__container u-container">
+    <div class="c-post-header__container__categories">
+      <span class="u-screen-reader-text">Categories</span>
+      <a
+        class="c-post-header__container__categories__link"
+        [routerLink]="getUrl(post.category.link)"
+      >
+        {{ post.category.name }}
+      </a>
+    </div>
+    <h1
+      class="c-post-header__container__title u-h1"
+      [innerHTML]="post.title.rendered"
+    ></h1>
+    <ul class="c-post-header__container__post-meta">
+      <li class="c-post-header__container__post-meta__item">
+        <span class="u-screen-reader-text">Post author</span>
+        <img
+          role="img"
+          src="assets/images/icons/person.svg"
+          class="c-post-header__container__post-meta__item__img"
+        />
+        <span class="c-post-header__container__post-meta__item__text">
+          By <a [routerLink]="getUrl(post.user.link)">{{ post.user.name }}</a>
+        </span>
+      </li>
+      <li class="c-post-header__container__post-meta__item">
+        <span class="u-screen-reader-text">Post date</span>
+        <img
+          role="img"
+          src="assets/images/icons/calendar.svg"
+          class="c-post-header__container__post-meta__item__img"
+        />
+        <span class="c-post-header__container__post-meta__item__text">
+          <a [routerLink]="getUrl(post.link)">{{ getDate(post.date) }}</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</header>

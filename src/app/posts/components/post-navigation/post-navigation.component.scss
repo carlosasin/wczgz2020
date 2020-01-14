@@ -1,0 +1,138 @@
+@import "variables/index";
+
+.c-post-navigation {
+  font-size: 1.8rem;
+  padding-bottom: 5rem;
+
+  &__container {
+    &__line {
+      margin: 0 0 2.8rem 0;
+      color: $colorTextSoft;
+      background: linear-gradient(
+        to left,
+        currentColor calc(50% - 16px),
+        transparent calc(50% - 16px),
+        transparent calc(50% + 16px),
+        currentColor calc(50% + 16px)
+      );
+      background-color: transparent !important;
+      border: none;
+      height: 0.1rem;
+      overflow: visible;
+      position: relative;
+
+      &:last-child {
+        margin: 2.8rem 0 0.8rem 0;
+      }
+
+      &::before,
+      &::after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 1.6rem;
+        position: absolute;
+        top: calc(50% - 0.8rem);
+        transform: rotate(22.5deg);
+        width: 0.1rem;
+      }
+
+      &::before {
+        left: calc(50% - 0.5rem);
+      }
+
+      &::after {
+        right: calc(50% - 0.5rem);
+      }
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+
+      &__link {
+        align-items: baseline;
+        display: flex;
+        font-weight: 600;
+        letter-spacing: -0.0275em;
+        text-decoration: none;
+        flex: 1;
+        color: $colorLinks;
+        line-height: 1.6;
+
+        &.m-prev {
+          padding-left: 2.5rem;
+          position: relative;
+
+          &::before {
+            content: "←";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+
+        &.m-next {
+          padding-left: 2.5rem;
+          position: relative;
+
+          &::before {
+            content: "→";
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: $screen-sm-minus) {
+  .c-post-navigation {
+    font-size: 2.4rem;
+    padding-bottom: 8rem;
+
+    &__container {
+      &__line {
+        margin: 0 0 4rem 0;
+
+        &:last-child {
+          margin: 4rem 0 0.8rem 0;
+        }
+      }
+
+      &__items {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__link {
+          &.m-prev {
+            padding-right: 3.5rem;
+          }
+
+          &.m-next {
+            flex-direction: row-reverse;
+            text-align: right;
+            padding-left: 0;
+            padding-right: 3.5rem;
+
+            &::before {
+              display: none;
+            }
+
+            &::after {
+              content: "→";
+              display: inline-block;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,6 @@
+import { AuthorDto } from './author.dto';
+import { CategoryDto } from './category.dto';
+
 export interface PostDto {
   id: number;
   date: string;
@@ -37,4 +40,6 @@ export interface PostDto {
     id: number;
     slug: string;
   };
+  category?: CategoryDto;
+  user?: AuthorDto;
 }

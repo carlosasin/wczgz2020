@@ -1,0 +1,28 @@
+<nav
+  *ngIf="post.next || post.previous"
+  class="c-post-navigation"
+  role="navigation"
+>
+  <div class="c-post-navigation__container u-container">
+    <hr class="c-post-navigation__container__line" />
+
+    <div class="c-post-navigation__container__items">
+      <a
+        *ngIf="post.previous"
+        class="c-post-navigation__container__items__link m-prev"
+        [routerLink]="'/' + post.previous.slug"
+      >
+        {{ post.previous.slug }}
+      </a>
+      <a
+        *ngIf="post.next"
+        class="c-post-navigation__container__items__link m-next"
+        [routerLink]="'/' + post.next.slug"
+      >
+        {{ post.next.slug }}
+      </a>
+    </div>
+
+    <hr class="c-post-navigation__container__line" />
+  </div>
+</nav>
