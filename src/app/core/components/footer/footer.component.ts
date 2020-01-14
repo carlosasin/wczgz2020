@@ -5,7 +5,7 @@ import { environment } from '../../../../environments/environment';
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
   getYear() {
@@ -14,5 +14,9 @@ export class FooterComponent {
 
   getTitle() {
     return environment.title;
+  }
+
+  scrollTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
