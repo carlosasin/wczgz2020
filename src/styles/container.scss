@@ -1,0 +1,42 @@
+.u-container {
+  width: calc(100% - 40px);
+  display: block;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+
+  &-thin {
+    max-width: 58rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: $screen-sm) {
+  .u-container {
+    width: 730px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-width: $screen-md) {
+  .u-container {
+    width: 900px;
+  }
+}
+
+@media only screen and (min-width: $screen-lg) {
+  .u-container {
+    width: 1120px;
+  }
+}

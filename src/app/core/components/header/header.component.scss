@@ -1,0 +1,87 @@
+@import 'variables/index';
+
+.c-header {
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem;
+    text-align: center;
+
+    &__titles {
+      max-width: 168rem;
+      padding: 3.15rem 0;
+      z-index: 100;
+
+      &__title {
+        font-size: 2.1rem;
+        font-weight: 600;
+        line-height: 1;
+        margin: 0;
+
+        > * {
+          color: inherit;
+          display: block;
+          text-decoration: none;
+
+          ::ng-deep .desktop & {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      &__subtitle {
+        display: none;
+        margin-top: 1rem;
+        color: $colorTextSoft;
+        font-size: 1.8rem;
+        font-weight: 500;
+        display: none;
+        letter-spacing: -0.0311em;
+        transition: all 0.15s linear;
+      }
+    }
+  }
+}
+
+@media all and (min-width: $screen-sm-minus) {
+  .c-header {
+    &__container {
+      &__titles {
+        padding: 3.8rem 0;
+
+        &__title {
+          font-size: 2.4rem;
+          font-weight: 700;
+        }
+
+        &__subtitle {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: $screen-md) {
+  .c-header {
+    &__container {
+      text-align: left;
+      padding: 0;
+      display: block;
+
+      &__titles {
+        align-items: baseline;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        &__subtitle {
+          margin: 1rem 0 0 2.4rem;
+        }
+      }
+    }
+  }
+}

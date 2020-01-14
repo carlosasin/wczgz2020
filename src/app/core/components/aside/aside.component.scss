@@ -1,0 +1,26 @@
+@import 'variables/index';
+
+.c-aside {
+  padding-bottom: 30px;
+}
+
+@media all and (min-width: $screen-sm-minus) {
+  .c-aside {
+    padding-bottom: 80px;
+
+    &__container {
+      display: flex;
+
+      > * {
+        width: 50%;
+
+        &:nth-child(odd) {
+          margin-right: 2rem;
+        }
+        &:nth-child(even) {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="c-categories">
+  <h2 class="c-categories__title u-h3">Categorías</h2>
+  <ul *ngIf="categories$ | async as categories" class="c-categories__list">
+    <li *ngFor="let category of categories" class="c-categories__list__item">
+      <a [routerLink]="getUrl(category.link)">{{ category.name }}</a>
+    </li>
+  </ul>
+</div>

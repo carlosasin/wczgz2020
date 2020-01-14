@@ -1,0 +1,19 @@
+@import 'variables/index';
+
+.c-not-found {
+  padding: 4rem 0;
+
+  &__container {
+    text-align: center;
+
+    &__title {
+      margin-top: 0;
+    }
+  }
+}
+
+@media all and (min-width: $screen-sm-minus) {
+  .c-not-found {
+    padding: 8rem 0 6rem;
+  }
+}

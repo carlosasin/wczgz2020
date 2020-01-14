@@ -1,0 +1,83 @@
+@import 'variables/index';
+
+.c-footer {
+  &__content {
+    border-top: 1px solid $colorBorderDefault;
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 3rem 0;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      ::ng-deep .desktop & {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &__credits {
+      &__copyright {
+        font-weight: 600;
+        margin: 0;
+      }
+
+      &__wordpress {
+        display: none;
+      }
+    }
+
+    &__link_top {
+      color: $colorTextSoft;
+
+      > * {
+        text-align: right;
+        cursor: pointer;
+
+        &::after {
+          content: ' ↑';
+        }
+      }
+
+      &__long {
+        display: none;
+      }
+    }
+  }
+}
+
+@media all and (min-width: $screen-sm-minus) {
+  .c-footer {
+    &__content {
+      font-size: 1.8rem;
+
+      &__credits {
+        display: flex;
+
+        &__copyright {
+          font-weight: 700;
+        }
+
+        &__wordpress {
+          display: block;
+          color: $colorTextSoft;
+          margin: 0 0 0 2.4rem;
+        }
+      }
+
+      &__link_top {
+        &__short {
+          display: none;
+        }
+
+        &__long {
+          display: block;
+        }
+      }
+    }
+  }
+}

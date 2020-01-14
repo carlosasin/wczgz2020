@@ -1,0 +1,8 @@
+<div class="c-recent-entries">
+  <h2 class="c-recent-entries__title u-h3">Entradas recientes</h2>
+  <ul *ngIf="entries$ | async as entries" class="c-recent-entries__list">
+    <li *ngFor="let entry of entries" class="c-recent-entries__list__item">
+      <a [routerLink]="getUrl(entry.link)">{{ entry.title.rendered }}</a>
+    </li>
+  </ul>
+</div>

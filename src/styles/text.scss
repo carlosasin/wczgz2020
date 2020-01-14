@@ -1,0 +1,87 @@
+/* Headings */
+
+.u-h1,
+.u-h2,
+.u-h3,
+.u-h4 {
+  font-feature-settings: 'lnum';
+  font-variant-numeric: lining-nums;
+  font-weight: 700;
+  letter-spacing: -0.0415625em;
+  line-height: 1.25;
+  margin: 3.5rem 0 2rem;
+}
+
+.u-h1 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.138888889;
+}
+
+.u-h2 {
+  font-size: 3.2rem;
+}
+
+.u-h3 {
+  font-size: 2.8rem;
+}
+
+.u-h4 {
+  font-size: 2.4rem;
+}
+
+/* Texts */
+
+p {
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+
+.u-intro-text {
+  margin-top: 2rem;
+}
+
+/* Links */
+a {
+  color: $colorLinks;
+
+  .desktop & {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media all and (min-width: $screen-sm-minus) {
+  /* Headings */
+
+  .u-h1,
+  .u-h2,
+  .u-h3,
+  .u-h4 {
+    margin: 6rem auto 3rem;
+  }
+
+  .u-h1 {
+    font-size: 6.4rem;
+  }
+
+  .u-h2 {
+    font-size: 4.8rem;
+  }
+
+  .u-h3 {
+    font-size: 4rem;
+  }
+
+  .u-h4 {
+    font-size: 3.2rem;
+  }
+
+  /* Texts */
+
+  .u-intro-text {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
