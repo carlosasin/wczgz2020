@@ -1,13 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ApiModule } from './api/api.module';
 import { routes } from './app.routes';
+import { AppService } from './app.service';
 import { SkeletonComponent } from './core/components/skeleton/skeleton.component';
 import { CoreModule } from './core/core.module';
-import { HomeModule } from './home/home.module';
+import { PostsModule } from './posts/posts.module';
+
+export function initPaths(appService: AppService) {
+  return (): Promise<any> => {
+    return appService.init();
+  };
+}
 
 @NgModule({
   imports: [
@@ -22,9 +29,17 @@ import { HomeModule } from './home/home.module';
     // App modules
     ApiModule,
     CoreModule,
-    HomeModule
+    PostsModule
   ],
-  providers: [],
+  providers: [
+    AppService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initPaths,
+      deps: [AppService],
+      multi: true
+    }
+  ],
   bootstrap: [SkeletonComponent]
 })
 export class AppModule {}

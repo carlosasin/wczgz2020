@@ -9,12 +9,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SkeletonComponent } from './components/skeleton/skeleton.component';
 
-// export function initPaths(pathsService: PathsService) {
-//   return (): Promise<any> => {
-//     return pathsService.init();
-//   };
-// }
-
 @NgModule({
   imports: [CommonModule, RouterModule, ApiModule],
   declarations: [
@@ -25,34 +19,6 @@ import { SkeletonComponent } from './components/skeleton/skeleton.component';
     RecentEntriesComponent,
     CategoriesComponent
   ],
-  // providers: [
-  //   HttpClient,
-  //   Router,
-  //   {
-  //     provide: APP_INITIALIZER,
-  //     useFactory: initPages,
-  //     deps: [HttpClient],
-  //     multi: true
-  //   }
-  // ],
   exports: [SkeletonComponent]
 })
 export class CoreModule {}
-
-// export function initPages(router: Router, http: HttpClient) {
-//   return () =>
-//     new Promise(resolve => {
-//       return http
-//         .get<Paths>(`${environment.apiUrl}pages/v3/wordcamp`)
-//         .pipe(catchError(error => throwError(error)))
-//         .subscribe((paths: Paths) => {
-//           paths.posts.forEach((path: string) => {
-//             router.config.unshift({
-//               path,
-//               component: PostLayoutComponent
-//             });
-//           });
-//           resolve(true);
-//         });
-//     });
-// }

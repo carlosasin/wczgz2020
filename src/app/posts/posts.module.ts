@@ -6,6 +6,7 @@ import { PostLayoutComponent } from './components/post-layout/post-layout.compon
 @NgModule({
   imports: [CommonModule, ApiModule],
   declarations: [PostLayoutComponent],
-  exports: [PostLayoutComponent]
+  exports: [PostLayoutComponent],
+  entryComponents: [PostLayoutComponent]
 })
 export class PostsModule {}
