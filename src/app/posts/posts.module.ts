@@ -5,6 +5,7 @@ import { ApiModule } from '../api/api.module';
 import { PostBodyComponent } from './components/post-body/post-body.component';
 import { PostHeaderComponent } from './components/post-header/post-header.component';
 import { PostLayoutComponent } from './components/post-layout/post-layout.component';
+import { PostListLayoutComponent } from './components/post-list-layout/post-list-layout.component';
 import { PostNavigationComponent } from './components/post-navigation/post-navigation.component';
 import { PostsResolver } from './posts.resolver';
 
@@ -16,8 +17,9 @@ import { PostsResolver } from './posts.resolver';
     PostHeaderComponent,
     PostBodyComponent,
     PostNavigationComponent,
+    PostListLayoutComponent
   ],
-  exports: [PostLayoutComponent],
+  exports: [PostLayoutComponent, PostListLayoutComponent],
   entryComponents: [PostLayoutComponent],
 })
 export class PostsModule {}

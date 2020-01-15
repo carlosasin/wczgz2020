@@ -1,1 +1,4 @@
-<p>home</p>
+<div *ngIf="posts$ | async as posts" class="c-home-layout">
+  <app-post-list-layout *ngFor="let post of posts" [post]="post">
+  </app-post-list-layout>
+</div>

@@ -1,5 +1,5 @@
-import { AuthorDto } from './author.dto';
 import { CategoryDto } from './category.dto';
+import { UserDto } from './user.dto';
 
 export interface PostDto {
   id: number;
@@ -41,5 +41,5 @@ export interface PostDto {
     slug: string;
   };
   category?: CategoryDto;
-  user?: AuthorDto;
+  user?: UserDto;
 }
