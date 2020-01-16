@@ -12,14 +12,14 @@
         class="c-post-navigation__container__items__link m-prev"
         [routerLink]="'/' + post.previous.slug"
       >
-        {{ post.previous.slug }}
+        {{ post.previous.title }}
       </a>
       <a
         *ngIf="post.next"
         class="c-post-navigation__container__items__link m-next"
         [routerLink]="'/' + post.next.slug"
       >
-        {{ post.next.slug }}
+        {{ post.next.title }}
       </a>
     </div>
 

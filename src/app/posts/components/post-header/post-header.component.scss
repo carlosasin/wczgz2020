@@ -6,6 +6,11 @@
   color: $colorTextDefault;
   text-align: center;
 
+  &.m-list {
+    background-color: $colorBackgroundDefault;
+    padding: 4rem 0 0;
+  }
+
   &__container {
     &__categories {
       line-height: 1.25;
@@ -26,6 +31,11 @@
     &__title {
       margin-top: 0;
       margin-bottom: 0;
+
+      &__link {
+        color: inherit;
+        text-decoration: none;
+      }
     }
 
     &__post-meta {
@@ -72,6 +82,12 @@
 
 @media all and (min-width: $screen-sm-minus) {
   .c-post-header {
+    padding: 8rem 0;
+
+    &.m-list {
+      padding: 8rem 0 0;
+    }
+
     &__container {
       &__categories {
         margin-bottom: 3rem;

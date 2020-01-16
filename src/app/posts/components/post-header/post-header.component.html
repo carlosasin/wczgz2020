@@ -1,4 +1,4 @@
-<header class="c-post-header">
+<header class="c-post-header" [ngClass]="{ 'm-list': listView }">
   <div class="c-post-header__container u-container">
     <div class="c-post-header__container__categories">
       <span class="u-screen-reader-text">Categories</span>
@@ -9,7 +9,11 @@
         {{ post.category.name }}
       </a>
     </div>
+    <h2 *ngIf="listView" class="c-post-header__container__title u-h1">
+      <a class="c-post-header__container__title__link" [routerLink]="getUrl(post.link)" [innerHTML]="post.title.rendered"></a>
+    </h2>
     <h1
+      *ngIf="!listView"
       class="c-post-header__container__title u-h1"
       [innerHTML]="post.title.rendered"
     ></h1>

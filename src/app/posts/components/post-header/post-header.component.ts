@@ -11,6 +11,7 @@ import { Urls } from '../../../utilities/urls';
 })
 export class PostHeaderComponent {
   @Input() post: PostDto;
+  @Input() listView = false;
 
   getUrl(link: string): string {
     return new Urls().getPath(link);

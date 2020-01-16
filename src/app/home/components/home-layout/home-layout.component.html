@@ -1,4 +1,8 @@
 <div *ngIf="posts$ | async as posts" class="c-home-layout">
-  <app-post-list-layout *ngFor="let post of posts" [post]="post">
-  </app-post-list-layout>
+  <ng-template ngFor let-post let-i="index" [ngForOf]="posts">
+    <div *ngIf="i > 0" class="c-home-layout__container u-container">
+      <hr class="c-home-layout__container__line" />
+    </div>
+    <app-post-list-layout [post]="post"></app-post-list-layout>
+  </ng-template>
 </div>

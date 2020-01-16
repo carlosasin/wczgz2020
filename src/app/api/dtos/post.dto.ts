@@ -35,10 +35,12 @@ export interface PostDto {
   next: {
     id: number;
     slug: string;
+    title: string;
   };
   previous: {
     id: number;
     slug: string;
+    title: string;
   };
   category?: CategoryDto;
   user?: UserDto;
