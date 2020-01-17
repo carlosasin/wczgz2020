@@ -6,13 +6,12 @@ import { PostDto } from '../../../api/dtos/post.dto';
   selector: 'app-post-layout',
   templateUrl: './post-layout.component.html',
   styleUrls: ['./post-layout.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostLayoutComponent {
   post: PostDto = null;
 
   constructor(private readonly route: ActivatedRoute) {
     this.post = this.route.snapshot.data.post;
-    console.log(this.post);
   }
 }
