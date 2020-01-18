@@ -1,27 +1,23 @@
-# Wczgz2020
+# WordPress desacoplado. Mueve tu WordPress al /futuro/ presente - Frontend part
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+Code for the workshop of WordCamp Zaragoza 2020, "WordPress desacoplado. Mueve tu WordPress al /futuro/ presente"
 
-## Development server
+## Included
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular core
 
-## Code scaffolding
+- Angular ssr
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Part of the twenty twenty wordpress theme made using angular
 
-## Build
+### Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- Nodejs
 
-## Running unit tests
+## Authors
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Carlos Asín** - _Initial work_ - [linkedin.com/in/carlosasin](https://www.linkedin.com/in/carlosasin/)
 
-## Running end-to-end tests
+## Built With
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
