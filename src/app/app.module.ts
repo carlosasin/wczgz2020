@@ -19,7 +19,7 @@ export function initPaths(appService: AppService) {
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     RouterModule.forRoot(routes, {
       initialNavigation: 'disabled',
